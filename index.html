@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Priya &amp; Sam's Recipes</title>
+<style>
+  :root { --ink:#1d2433; --muted:#667085; --cream:#fbf7ef; --card:#ffffff; --accent:#e8590c; --leaf:#2f9e44; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif; background:var(--cream); color:var(--ink); }
+  header { display:flex; justify-content:space-between; align-items:center; padding:18px 6vw; background:#fff; border-bottom:1px solid #eadfcd; }
+  .logo { font-weight:800; font-size:1.25rem; letter-spacing:-.01em; }
+  .logo span { color:var(--accent); }
+  nav a { margin-left:22px; color:var(--muted); text-decoration:none; font-weight:600; }
+  .hero { padding:44px 6vw 26px; }
+  .hero h1 { font-size:clamp(2rem,5vw,3.2rem); line-height:1.05; margin:0 0 12px; letter-spacing:-.02em; }
+  .hero p { font-size:1.15rem; color:var(--muted); margin:0 0 20px; max-width:34em; }
+  .search { display:flex; gap:10px; max-width:520px; }
+  .search input { flex:1; padding:13px 16px; border:2px solid #eadfcd; border-radius:12px; font:inherit; background:#fff; }
+  .search button { padding:13px 20px; border:0; border-radius:12px; background:var(--accent); color:#fff; font:inherit; font-weight:700; }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; padding:10px 6vw 50px; }
+  .card { background:var(--card); border-radius:18px; overflow:hidden; box-shadow:0 8px 24px rgba(29,36,51,.08); }
+  .pic { height:150px; position:relative; }
+  .pancakes { background:linear-gradient(160deg,#ffe3b3,#ffc078); }
+  .salad { background:linear-gradient(160deg,#d3f9d8,#8ce99a); }
+  .soup { background:linear-gradient(160deg,#ffd8cc,#ff8f73); }
+  .stack, .stack::before, .stack::after { position:absolute; left:50%; width:120px; height:26px; margin-left:-60px; border-radius:50%; background:#d9822b; border:3px solid #a85d14; content:""; }
+  .stack { bottom:34px; } .stack::before { bottom:16px; left:60px; } .stack::after { bottom:36px; left:60px; background:#e89a45; }
+  .bowl { position:absolute; left:50%; bottom:30px; width:130px; height:65px; margin-left:-65px; border-radius:0 0 80px 80px; }
+  .salad .bowl { background:#2b8a3e; } .soup .bowl { background:#c92a2a; }
+  .bowl::before { content:""; position:absolute; left:8px; right:8px; top:-12px; height:24px; border-radius:50%; }
+  .salad .bowl::before { background:#69db7c; } .soup .bowl::before { background:#ff6b4a; }
+  .card h3 { margin:14px 16px 4px; font-size:1.15rem; }
+  .card p { margin:0 16px 16px; color:var(--muted); }
+  .tag { display:inline-block; margin:0 16px 16px; padding:4px 10px; border-radius:999px; background:#fff4e6; color:var(--accent); font-weight:700; font-size:.85rem; }
+  @media (max-width:700px) { .grid { grid-template-columns:1fr; } nav { display:none; } .hero { padding-top:28px; } }
+</style>
+</head>
+<body>
+<header><div class="logo">Priya <span>&amp;</span> Sam's Recipes</div><nav><a href="#">Breakfast</a><a href="#">Lunch</a><a href="#">Dinner</a></nav></header>
+<section class="hero">
+  <h1>Good food,<br>simply explained.</h1>
+  <p>Three recipes we cook every week. No stories, no pop-ups, just the steps.</p>
+  <div class="search"><input placeholder="Search recipes"><button>Search</button></div>
+</section>
+<section class="grid">
+  <article class="card"><div class="pic pancakes"><div class="stack"></div></div><h3>Fluffy pancakes</h3><p>20 minutes, 6 pancakes</p><span class="tag">Breakfast</span></article>
+  <article class="card"><div class="pic salad"><div class="bowl"></div></div><h3>Crunchy garden salad</h3><p>10 minutes, serves 2</p><span class="tag">Lunch</span></article>
+  <article class="card"><div class="pic soup"><div class="bowl"></div></div><h3>Tomato soup</h3><p>30 minutes, serves 4</p><span class="tag">Dinner</span></article>
+</section>
+</body>
+</html>
